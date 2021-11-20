@@ -41,29 +41,31 @@ public class Main {
         int DailyLoss2 = 500;
         int DaysForLoss1 = WeightToLose*1000/DailyLoss1;
         int DaysForLoss2 = WeightToLose*1000/DailyLoss2;
-        //double DaysAverage = WeightToLose*1000/((DailyLoss1+DailyLoss2)/2); //определить остаток от деления при помощи %???//
+        int DaysAverage = WeightToLose*1000/((DailyLoss1+DailyLoss2)/2); //не считает цифры после запятой, даже с типоами переменной с плавающей точкой??//
         System.out.println("При сбросе 250г в день спортсмен будет худеть "+ DaysForLoss1+" дней, а при сбросе 500 г в день спортсмен будет худеть "+DaysForLoss2+" дней.");
-        //System.out.println("В среднем на похудение спортсмену потребуется "+DaysAverage+" дней.");
+        System.out.println("В среднем на похудение спортсмену потребуется "+DaysAverage+" дней.");
+
     //TASK5//
 
         int SalaryMashaOld = 67760;
         int SalaryMashaAnnualOld = SalaryMashaOld*12;
-        double SalaryMashaNew = SalaryMashaOld*1.1;
-        double SalaryMashaAnnualNew = SalaryMashaNew*12;
-        double SalaryDifferenceMasha = SalaryMashaAnnualNew-SalaryMashaAnnualOld;
+        float SalaryMashaNew = SalaryMashaOld*1.1f;
+        float SalaryMashaAnnualNew = SalaryMashaNew*12f;
+        float SalaryDifferenceMasha = SalaryMashaAnnualNew-SalaryMashaAnnualOld;
         int SalaryDenisOld = 83690;
         int SalaryDenisAnnualOld = SalaryDenisOld*12;
-        double SalaryDenisNew = SalaryDenisOld*1.1;
-        double SalaryDenisAnnualNew = SalaryDenisNew*12;
-        double SalaryDifferenceDenis = SalaryDenisAnnualNew-SalaryDenisAnnualOld;
+        float SalaryDenisNew = SalaryDenisOld*1.1f;
+        float SalaryDenisAnnualNew = SalaryDenisNew*12f;
+        float SalaryDifferenceDenis = SalaryDenisAnnualNew-SalaryDenisAnnualOld;
         int SalaryKristinaOld = 76230;
         int SalaryKristinaAnnualOld = SalaryKristinaOld*12;
-        double SalaryKristinaNew = SalaryKristinaOld*1.1;
-        double SalaryKristinaAnnualNew = SalaryKristinaNew*12;
-        double SalaryDifferenceKristina = SalaryKristinaAnnualNew-SalaryKristinaAnnualOld;
+        float SalaryKristinaNew = SalaryKristinaOld*1.1f;
+        float SalaryKristinaAnnualNew = SalaryKristinaNew*12f;
+        float SalaryDifferenceKristina = SalaryKristinaAnnualNew-SalaryKristinaAnnualOld;
         System.out.println("В следующем году зарплата Маши составит "+SalaryMashaNew+" рублей в месяц, а ее годовой доход вырастет на "+SalaryDifferenceMasha+" рублей.");
         System.out.println("В следующем году зарплата Дениса составит "+SalaryDenisNew+" рублей в месяц, а его годовой доход вырастет на "+SalaryDifferenceDenis+" рублей.");
         System.out.println("В следующем году зарплата Кристины составит "+SalaryKristinaNew+" рублей в месяц, а ее годовой доход вырастет на "+SalaryDifferenceKristina+" рублей.");
+
 
     }
 
