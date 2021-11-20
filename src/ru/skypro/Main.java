@@ -27,39 +27,50 @@ public class Main {
 
     //TASK3//
 
-        byte BananaWeight = 80;
-        byte MilkWeight = 105;
-        byte IceCreamWeight = 100;
-        byte EggWeight = 70;
-        float BreakfastWeight = BananaWeight*5 + MilkWeight*2 + IceCreamWeight*2 + EggWeight*4;
-        System.out.println("Завтрак весит " + BreakfastWeight/1000 + " кг");
+        int ConversionToKg = 1000;
+        int BananaWeight = 80;
+        int BananaQty = 5;
+        int MilkWeight = 105;
+        int MilkWeightML = 200;
+        int MilkQty = MilkWeightML/100;
+        int IceCreamWeight = 100;
+        int IceCreamQty = 2;
+        int EggWeight = 70;
+        int EggQty = 4;
+        float BreakfastWeight = BananaWeight*BananaQty + MilkWeight*MilkQty + IceCreamWeight*IceCreamQty + EggWeight*EggQty;
+        System.out.println("Завтрак весит " + BreakfastWeight/ConversionToKg + " кг");
 
     //TASK4//
 
         byte WeightToLose = 7;
         int DailyLoss1 = 250;
         int DailyLoss2 = 500;
-        int DaysForLoss1 = WeightToLose*1000/DailyLoss1;
-        int DaysForLoss2 = WeightToLose*1000/DailyLoss2;
-        int DaysAverage = WeightToLose*1000/((DailyLoss1+DailyLoss2)/2); //не считает цифры после запятой, даже с типоами переменной с плавающей точкой??//
+        int DaysForLoss1 = WeightToLose*ConversionToKg/DailyLoss1;
+        int DaysForLoss2 = WeightToLose*ConversionToKg/DailyLoss2;
+        float DaysAverage = WeightToLose*ConversionToKg/((DailyLoss1+DailyLoss2)/2.0f);
+        //or//
+        int DaysAverage2 = (DaysForLoss1+DaysForLoss2)/2;
         System.out.println("При сбросе 250г в день спортсмен будет худеть "+ DaysForLoss1+" дней, а при сбросе 500 г в день спортсмен будет худеть "+DaysForLoss2+" дней.");
         System.out.println("В среднем на похудение спортсмену потребуется "+DaysAverage+" дней.");
-
+        System.out.println("В среднем на похудение спортсмену потребуется "+DaysAverage2+" дней.");
     //TASK5//
 
+        int PercentForIncrease = 10;
+        float IncreaseCoefficient = 1+(PercentForIncrease/100f);
+        //System.out.println(IncreaseCoefficient);
         int SalaryMashaOld = 67760;
         int SalaryMashaAnnualOld = SalaryMashaOld*12;
-        float SalaryMashaNew = SalaryMashaOld*1.1f;
+        float SalaryMashaNew = SalaryMashaOld*IncreaseCoefficient;
         float SalaryMashaAnnualNew = SalaryMashaNew*12f;
         float SalaryDifferenceMasha = SalaryMashaAnnualNew-SalaryMashaAnnualOld;
         int SalaryDenisOld = 83690;
         int SalaryDenisAnnualOld = SalaryDenisOld*12;
-        float SalaryDenisNew = SalaryDenisOld*1.1f;
+        float SalaryDenisNew = SalaryDenisOld*IncreaseCoefficient;
         float SalaryDenisAnnualNew = SalaryDenisNew*12f;
         float SalaryDifferenceDenis = SalaryDenisAnnualNew-SalaryDenisAnnualOld;
         int SalaryKristinaOld = 76230;
         int SalaryKristinaAnnualOld = SalaryKristinaOld*12;
-        float SalaryKristinaNew = SalaryKristinaOld*1.1f;
+        float SalaryKristinaNew = SalaryKristinaOld*IncreaseCoefficient;
         float SalaryKristinaAnnualNew = SalaryKristinaNew*12f;
         float SalaryDifferenceKristina = SalaryKristinaAnnualNew-SalaryKristinaAnnualOld;
         System.out.println("В следующем году зарплата Маши составит "+SalaryMashaNew+" рублей в месяц, а ее годовой доход вырастет на "+SalaryDifferenceMasha+" рублей.");
