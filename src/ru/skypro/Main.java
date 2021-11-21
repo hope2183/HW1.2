@@ -18,64 +18,65 @@ public class Main {
         System.out.println (f);
 
     //TASK2//
-        float Boxer1Weight = 78.2f;
-        float Boxer2Weight = 82.7f;
-        float BoxersWeight = Boxer1Weight+Boxer2Weight;
-        float WeightDifference = Boxer2Weight-Boxer1Weight;
-        System.out.println("Вес обоих спортсменов " +BoxersWeight + "кг");
-        System.out.println ("Разница в весе спортсменов "+WeightDifference+" кг");
+        float boxer1Weight = 78.2f;
+        float boxer2Weight = 82.7f;
+        float boxersWeight = boxer1Weight+boxer2Weight;
+        float weightDifference = boxer2Weight-boxer1Weight;
+        System.out.println("Вес обоих спортсменов " +boxersWeight + "кг");
+        System.out.println ("Разница в весе спортсменов "+weightDifference+" кг");
 
     //TASK3//
 
-        int ConversionToKg = 1000;
-        int BananaWeight = 80;
-        int BananaQty = 5;
-        int MilkWeight = 105;
-        int MilkWeightML = 200;
-        int MilkQty = MilkWeightML/100;
-        int IceCreamWeight = 100;
-        int IceCreamQty = 2;
-        int EggWeight = 70;
-        int EggQty = 4;
-        float BreakfastWeight = BananaWeight*BananaQty + MilkWeight*MilkQty + IceCreamWeight*IceCreamQty + EggWeight*EggQty;
-        System.out.println("Завтрак весит " + BreakfastWeight/ConversionToKg + " кг");
+        int conversionToKg = 1000;
+        int bananaWeight = 80;
+        int bananaQty = 5;
+        int milkWeight100Ml = 105;
+        int milkVolumeML = 200;
+        int milkPortion = milkVolumeML/100;
+        int iceCreamWeight = 100;
+        int iceCreamQty = 2;
+        int eggWeight = 70;
+        int eggQty = 4;
+        float breakfastWeight = bananaWeight*bananaQty + milkWeight100Ml*milkPortion + iceCreamWeight*iceCreamQty + eggWeight*eggQty;
+        System.out.println("Завтрак весит " + breakfastWeight/conversionToKg + " кг");
 
     //TASK4//
 
-        byte WeightToLose = 7;
-        int DailyLoss1 = 250;
-        int DailyLoss2 = 500;
-        int DaysForLoss1 = WeightToLose*ConversionToKg/DailyLoss1;
-        int DaysForLoss2 = WeightToLose*ConversionToKg/DailyLoss2;
-        float DaysAverage = WeightToLose*ConversionToKg/((DailyLoss1+DailyLoss2)/2.0f);
+        int weightToLoseKg = 7;
+        int weightToLoseGr = weightToLoseKg*conversionToKg;
+        int dailyLossGr1 = 250;
+        int dailyLossGr2 = 500;
+        int daysForLoss1 = weightToLoseGr/dailyLossGr1;
+        int daysForLoss2 = weightToLoseGr/dailyLossGr2;
+        float daysAverage = weightToLoseGr/((dailyLossGr1+dailyLossGr2)/2.0f);
         //or//
-        int DaysAverage2 = (DaysForLoss1+DaysForLoss2)/2;
-        System.out.println("При сбросе 250г в день спортсмен будет худеть "+ DaysForLoss1+" дней, а при сбросе 500 г в день спортсмен будет худеть "+DaysForLoss2+" дней.");
-        System.out.println("В среднем на похудение спортсмену потребуется "+DaysAverage+" дней.");
-        System.out.println("В среднем на похудение спортсмену потребуется "+DaysAverage2+" дней.");
+        int daysAverage2 = (daysForLoss1+daysForLoss2)/2;
+        System.out.println("При сбросе 250г в день спортсмен будет худеть "+ daysForLoss1+" дней, а при сбросе 500 г в день спортсмен будет худеть "+daysForLoss2+" дней.");
+        System.out.println("В среднем на похудение спортсмену потребуется "+daysAverage+" дней.");
+        System.out.println("В среднем на похудение спортсмену потребуется "+daysAverage2+" дней.");
     //TASK5//
 
-        int PercentForIncrease = 10;
-        float IncreaseCoefficient = 1+(PercentForIncrease/100f);
-        //System.out.println(IncreaseCoefficient);
-        int SalaryMashaOld = 67760;
-        int SalaryMashaAnnualOld = SalaryMashaOld*12;
-        float SalaryMashaNew = SalaryMashaOld*IncreaseCoefficient;
-        float SalaryMashaAnnualNew = SalaryMashaNew*12f;
-        float SalaryDifferenceMasha = SalaryMashaAnnualNew-SalaryMashaAnnualOld;
-        int SalaryDenisOld = 83690;
-        int SalaryDenisAnnualOld = SalaryDenisOld*12;
-        float SalaryDenisNew = SalaryDenisOld*IncreaseCoefficient;
-        float SalaryDenisAnnualNew = SalaryDenisNew*12f;
-        float SalaryDifferenceDenis = SalaryDenisAnnualNew-SalaryDenisAnnualOld;
-        int SalaryKristinaOld = 76230;
-        int SalaryKristinaAnnualOld = SalaryKristinaOld*12;
-        float SalaryKristinaNew = SalaryKristinaOld*IncreaseCoefficient;
-        float SalaryKristinaAnnualNew = SalaryKristinaNew*12f;
-        float SalaryDifferenceKristina = SalaryKristinaAnnualNew-SalaryKristinaAnnualOld;
-        System.out.println("В следующем году зарплата Маши составит "+SalaryMashaNew+" рублей в месяц, а ее годовой доход вырастет на "+SalaryDifferenceMasha+" рублей.");
-        System.out.println("В следующем году зарплата Дениса составит "+SalaryDenisNew+" рублей в месяц, а его годовой доход вырастет на "+SalaryDifferenceDenis+" рублей.");
-        System.out.println("В следующем году зарплата Кристины составит "+SalaryKristinaNew+" рублей в месяц, а ее годовой доход вырастет на "+SalaryDifferenceKristina+" рублей.");
+        int percentForIncrease = 10;
+        float increaseCoefficient = 1+(percentForIncrease/100f);
+        //System.out.println(increaseCoefficient);
+        int salaryMashaOld = 67760;
+        int salaryMashaAnnualOld = salaryMashaOld*12;
+        float salaryMashaNew = salaryMashaOld*increaseCoefficient;
+        float salaryMashaAnnualNew = salaryMashaNew*12f;
+        float salaryDifferenceMasha = salaryMashaAnnualNew-salaryMashaAnnualOld;
+        int salaryDenisOld = 83690;
+        int salaryDenisAnnualOld = salaryDenisOld*12;
+        float salaryDenisNew = salaryDenisOld*increaseCoefficient;
+        float salaryDenisAnnualNew = salaryDenisNew*12f;
+        float salaryDifferenceDenis = salaryDenisAnnualNew-salaryDenisAnnualOld;
+        int salaryKristinaOld = 76230;
+        int salaryKristinaAnnualOld = salaryKristinaOld*12;
+        float salaryKristinaNew = salaryKristinaOld*increaseCoefficient;
+        float salaryKristinaAnnualNew = salaryKristinaNew*12f;
+        float salaryDifferenceKristina = salaryKristinaAnnualNew-salaryKristinaAnnualOld;
+        System.out.println("В следующем году зарплата Маши составит "+salaryMashaNew+" рублей в месяц, а ее годовой доход вырастет на "+salaryDifferenceMasha+" рублей.");
+        System.out.println("В следующем году зарплата Дениса составит "+salaryDenisNew+" рублей в месяц, а его годовой доход вырастет на "+salaryDifferenceDenis+" рублей.");
+        System.out.println("В следующем году зарплата Кристины составит "+salaryKristinaNew+" рублей в месяц, а ее годовой доход вырастет на "+salaryDifferenceKristina+" рублей.");
 
 
     }
