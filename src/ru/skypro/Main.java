@@ -28,17 +28,17 @@ public class Main {
     //TASK3//
 
         int conversionToKg = 1000;
-        int bananaWeight = 80;
+        int bananaWeightGr = 80;
         int bananaQty = 5;
         int milkWeight100Ml = 105;
         int milkVolumeML = 200;
         int milkPortion = milkVolumeML/100;
-        int iceCreamWeight = 100;
+        int iceCreamWeightGr = 100;
         int iceCreamQty = 2;
-        int eggWeight = 70;
+        int eggWeightGr = 70;
         int eggQty = 4;
-        float breakfastWeight = bananaWeight*bananaQty + milkWeight100Ml*milkPortion + iceCreamWeight*iceCreamQty + eggWeight*eggQty;
-        System.out.println("Завтрак весит " + breakfastWeight/conversionToKg + " кг");
+        float breakfastWeightGr = bananaWeightGr*bananaQty + milkWeight100Ml*milkPortion + iceCreamWeightGr*iceCreamQty + eggWeightGr*eggQty;
+        System.out.println("Завтрак весит " + breakfastWeightGr/conversionToKg + " кг");
 
     //TASK4//
 
