@@ -10,12 +10,16 @@ public class Main {
         long d = -11_111_111_111L;
         float e = 3.1111113f;
         double f = 3.345678901;
+        char g = 177; // результат в консоли отличается от того, что в таблице знаков//
+        boolean h = true; //не понятно, как использовать самостоятельно, без если, например //
         System.out.println (a);
         System.out.println (b);
         System.out.println (c);
         System.out.println (d);
         System.out.println (e);
         System.out.println (f);
+        System.out.println (g);
+        System.out.println (h);
 
     //TASK2//
         float boxer1Weight = 78.2f;
